@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="rma-build" content="25 Sep 2026, 14:30" />
+    <title>[ R | M Λ ]</title>
+    <link rel="stylesheet" crossorigin href="./assets/index-BTWtzJYQ.css">
+      <meta name="description" content="[ R | M Λ ] — listen with synced lyrics, karaoke, themes and a genre-aware equalizer." />
+    <meta name="author" content="Amir Golshan" />
+    <meta name="theme-color" content="#15803d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="R|MΛ" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="./icons/icon.svg" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <style id="boot-css">
+  #boot { position: fixed; inset: 0; z-index: 2147483000; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 18px; padding: 24px; color: #fff; text-align: center; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(circle at 20% 20%, #15803d 0, transparent 55%), radial-gradient(circle at 80% 30%, #0e7490 0, transparent 50%), radial-gradient(circle at 50% 100%, #7e22ce 0, transparent 55%), #07110b;
+    transition: opacity .45s ease; }
+  #boot.boot-out { opacity: 0; pointer-events: none; }
+  #boot h1 { margin: 0; font: 900 clamp(34px, 9vw, 64px)/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .18em; white-space: pre; }
+  #boot svg { width: min(70vw, 300px); height: auto; overflow: visible; }
+  #boot .bar { fill: #fff; opacity: .16; transition: opacity .3s ease; }
+  #boot .bar.on { opacity: .95; }
+  #boot .boot-track { width: min(70vw, 300px); height: 8px; border-radius: 99px; background: rgba(255,255,255,.2); overflow: hidden; }
+  #boot .boot-fill { height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #22c55e, #22d3ee); transition: width .25s ease; }
+  #boot .boot-pct { font: 700 28px/1 system-ui, -apple-system, sans-serif; font-variant-numeric: tabular-nums; }
+  #boot .boot-msg { margin: -6px 0 0; font-size: 15px; opacity: .92; min-height: 1.2em; }
+  #boot .boot-by { position: absolute; bottom: max(16px, env(safe-area-inset-bottom)); font-size: 12px; opacity: .8; }
+  #boot .boot-err { display: none; max-width: 420px; background: rgba(0,0,0,.35); border-radius: 16px; padding: 16px; }
+  #boot.failed .boot-err { display: block; }
+  #boot.failed .boot-track, #boot.failed .boot-pct { display: none; }
+  #boot .boot-err p { margin: 0 0 10px; }
+  #boot .boot-err code { display: block; font-size: 12px; opacity: .85; word-break: break-word; margin-bottom: 12px; }
+  #boot button { font: 600 16px system-ui, -apple-system, sans-serif; color: #07110b; background: #fff; border: 0; border-radius: 12px; padding: 12px 18px; margin: 4px; cursor: pointer; min-height: 44px; }
+  #boot button.ghost { color: #fff; background: transparent; box-shadow: inset 0 0 0 2px rgba(255,255,255,.7); }
+  #boot button:focus-visible { outline: 3px solid #22d3ee; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { #boot, #boot * { transition: none !important; } }
+  @media (forced-colors: active) { #boot .bar, #boot .boot-fill { forced-color-adjust: none; } }
+</style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="boot" role="status" aria-live="polite" aria-label="Loading [ R | M Λ ]">
+      <h1>[ R | M Λ ]</h1>
+      <svg viewBox="0 0 400 150" aria-hidden="true"><rect class="bar" x="8" y="110" width="16" height="30" rx="8"/><rect class="bar" x="34" y="85" width="16" height="55" rx="8"/><rect class="bar" x="60" y="60" width="16" height="80" rx="8"/><rect class="bar" x="86" y="30" width="16" height="110" rx="8"/><rect class="bar" x="112" y="50" width="16" height="90" rx="8"/><rect class="bar" x="138" y="10" width="16" height="130" rx="8"/><rect class="bar" x="164" y="40" width="16" height="100" rx="8"/><rect class="bar" x="190" y="70" width="16" height="70" rx="8"/><rect class="bar" x="216" y="20" width="16" height="120" rx="8"/><rect class="bar" x="242" y="55" width="16" height="85" rx="8"/><rect class="bar" x="268" y="80" width="16" height="60" rx="8"/><rect class="bar" x="294" y="45" width="16" height="95" rx="8"/><rect class="bar" x="320" y="95" width="16" height="45" rx="8"/><rect class="bar" x="346" y="65" width="16" height="75" rx="8"/><rect class="bar" x="372" y="105" width="16" height="35" rx="8"/></svg>
+      <div class="boot-pct" id="boot-pct">0%</div>
+      <div class="boot-track" aria-hidden="true"><div class="boot-fill" id="boot-fill"></div></div>
+      <p class="boot-msg" id="boot-msg">Loading the player…</p>
+      <div class="boot-err" role="alert">
+        <p><strong>The player couldn't open on this device.</strong></p>
+        <code id="boot-why"></code>
+        <button type="button" id="boot-retry">Try again</button>
+        <button type="button" class="ghost" id="boot-clean">Clear saved copy and reload</button>
+      </div>
+      <div class="boot-by">v. 25 Sep 2026, 14:30</div>
+    </div>
+    <script>
+(function () {
+  var SRC = "./assets/index-CSs153r8.js", SIZE = 703982;
+  var boot = document.getElementById("boot"), root = document.getElementById("root");
+  var pctEl = document.getElementById("boot-pct"), fill = document.getElementById("boot-fill"), msg = document.getElementById("boot-msg");
+  var bars = boot.querySelectorAll(".bar");
+  var target = 0, shown = 0, mounted = false, failed = false, injected = false;
+  function set(p) { if (p > target) target = Math.min(100, p); }
+  function render(p) {
+    pctEl.textContent = Math.floor(p) + "%";
+    fill.style.width = p + "%";
+    var lit = Math.round((p / 100) * bars.length);
+    for (var i = 0; i < bars.length; i++) bars[i].setAttribute("class", i < lit ? "bar on" : "bar");
+  }
+  (function tick() {
+    shown += (target - shown) * 0.18;
+    if (target - shown < 0.4) shown = target;
+    render(shown);
+    if (!mounted || shown < 100) requestAnimationFrame(tick);
+  })();
+  function fail(why) {
+    if (mounted || failed) return;
+    failed = true;
+    boot.className = "failed";
+    msg.textContent = "";
+    document.getElementById("boot-why").textContent = why || "";
+  }
+  document.getElementById("boot-retry").onclick = function () { location.reload(); };
+  document.getElementById("boot-clean").onclick = function () {
+    var jobs = [];
+    try { if (navigator.serviceWorker) jobs.push(navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); })); } catch (e) {}
+    try { if (window.caches) jobs.push(caches.keys().then(function (ks) { return Promise.all(ks.map(function (k) { return caches.delete(k); })); })); } catch (e) {}
+    Promise.all(jobs).then(function () { location.reload(); }, function () { location.reload(); });
+  };
+  window.addEventListener("error", function (e) { if (!mounted && injected) fail((e && e.message) || "Script error"); });
+  window.addEventListener("unhandledrejection", function (e) { if (!mounted && injected) fail(String((e && e.reason && (e.reason.message || e.reason)) || "")); });
+  function done() {
+    if (mounted) return;
+    mounted = true;
+    set(100);
+    setTimeout(function () {
+      boot.className = "boot-out";
+      setTimeout(function () { if (boot.parentNode) boot.parentNode.removeChild(boot); var c = document.getElementById("boot-css"); if (c) c.parentNode.removeChild(c); }, 500);
+    }, 380);
+  }
+  new MutationObserver(function () { if (root.children.length) done(); }).observe(root, { childList: true });
+  function inject() {
+    if (injected) return;
+    injected = true;
+    msg.textContent = "Tuning up…";
+    var s = document.createElement("script");
+    s.type = "module";
+    s.crossOrigin = "anonymous";
+    s.src = SRC;
+    s.onerror = function () { fail("The app files could not be downloaded. Check the internet connection."); };
+    document.head.appendChild(s);
+    var creep = setInterval(function () { if (mounted || failed) return clearInterval(creep); set(Math.min(99, target + (99 - target) * 0.08)); }, 250);
+  }
+  setTimeout(function () { if (!mounted && !failed) msg.textContent = "Almost there… (the first visit takes a little longer)"; }, 12000);
+  setTimeout(function () { if (!mounted) fail("The player is taking too long to open."); }, 90000);
+  set(2);
+  try {
+    if (!window.fetch || !window.ReadableStream || !window.Response || !("body" in Response.prototype)) throw 0;
+    fetch(SRC, { credentials: "same-origin" }).then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      if (!r.body || !r.body.getReader) return r.arrayBuffer().then(function () { set(88); });
+      var rd = r.body.getReader(), got = 0;
+      function pump() {
+        return rd.read().then(function (x) {
+          if (x.done) return set(88);
+          got += x.value.length;
+          set(3 + Math.min(85, (got / SIZE) * 85));
+          return pump();
+        });
+      }
+      return pump();
+    }).then(inject, function () { set(40); inject(); });
+  } catch (e) { set(40); inject(); }
+})();
+</script>
+      <script>(function(){var p=location.pathname;if(/\/index\.html$/.test(p))history.replaceState(null,'',p.replace(/index\.html$/,'')+location.search+location.hash);})();if('serviceWorker' in navigator&&location.protocol==='https:'){window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').catch(function(){});});}</script>
+  </body>
+</html>

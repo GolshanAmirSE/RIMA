@@ -1,0 +1,23 @@
+[ R | M Λ ] — HOW TO ADD SONGS (owner only)
+===========================================
+
+This folder holds everything the player plays:
+
+  library.json      the list of songs (the player reads this)
+  my-song.mp3       a song
+  my-song.lrc       its timed lyrics (optional, same name as the song)
+  my-song.jpg       its cover picture (optional)
+
+1. Prepare each song: MP3 (192-320 kbps), under 100 MB,
+   lowercase name with hyphens (night-drive.mp3).
+2. Open https://golshanamirse.github.io/RMA/#owner
+   -> Add music -> Play from this device -> pick your songs + .lrc files
+   -> set a genre where missing -> tab "Publish to your site"
+   -> Download library.json
+3. Copy the songs, lyrics, covers AND the new library.json into this
+   music folder (replace the old library.json).
+4. GitHub Desktop: Commit to main -> Push origin.
+   (Website: music folder -> Add file -> Upload files -> Commit changes.)
+5. Wait 1-2 minutes and refresh the player.
+
+Full guide: SETUP-GUIDE.md in the top folder of the site.
