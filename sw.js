@@ -1,11 +1,8 @@
 // [ R | M Λ ] — keeps the player available offline after the first visit. A new version replaces the old one automatically.
-const CACHE = "rma-player-c90f972740";
+const CACHE = "rma-player-1197183d79";
 const FILES = [
-  "./assets/geist-cyrillic-wght-normal-CHSlOQsW.woff2",
-  "./assets/geist-latin-ext-wght-normal-DMtmJ5ZE.woff2",
-  "./assets/geist-latin-wght-normal-Dm3htQBi.woff2",
-  "./assets/index-BTWtzJYQ.css",
-  "./assets/index-CSs153r8.js",
+  "./assets/index-Dp7hDD4l.js",
+  "./assets/index-wLnK5zmh.css",
   "./",
   "./index.html",
   "./manifest.webmanifest",

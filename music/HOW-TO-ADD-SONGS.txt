@@ -10,7 +10,7 @@ This folder holds everything the player plays:
 
 1. Prepare each song: MP3 (192-320 kbps), under 100 MB,
    lowercase name with hyphens (night-drive.mp3).
-2. Open https://golshanamirse.github.io/RMA/#owner
+2. Open https://golshanamirse.github.io/RIMA/#owner
    -> Add music -> Play from this device -> pick your songs + .lrc files
    -> set a genre where missing -> tab "Publish to your site"
    -> Download library.json

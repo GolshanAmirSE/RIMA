@@ -25,28 +25,28 @@ There are two ways to do everything in this guide. **GitHub Desktop** (recommend
 
 **Create the site**
 3. **File → New repository…**
-   - Name: `RMA` (GitHub names can't contain the symbols of the band name; the name becomes part of the web address).
-   - Local path: keep the suggested folder (usually `Documents\GitHub`). Your site will live in `Documents\GitHub\RMA`.
+   - Name: `RIMA` (GitHub names can't contain the symbols of the band name; the name becomes part of the web address).
+   - Local path: keep the suggested folder (usually `Documents\GitHub`). Your site will live in `Documents\GitHub\RIMA`.
    - Leave **Initialize this repository with a README** unticked, Git ignore **None**, License **None** → **Create repository**.
-4. **Repository → Show in Explorer** (Mac: **Show in Finder**). This opens the empty `RMA` folder.
-5. **Unzip** `RMA_web.zip` and copy **everything inside it** into the `RMA` folder: `index.html`, `404.html`, `sw.js`, `version.json`, `manifest.webmanifest`, `.nojekyll`, `README.md`, `SETUP-GUIDE.md` and the folders `assets`, `icons` and `music`. (Copy the contents, not the unzipped folder itself.)
+4. **Repository → Show in Explorer** (Mac: **Show in Finder**). This opens the empty `RIMA` folder.
+5. **Unzip** `RMA_web.zip` and copy **everything inside it** into the `RIMA` folder: `index.html`, `404.html`, `sw.js`, `version.json`, `manifest.webmanifest`, `.nojekyll`, `README.md`, `SETUP-GUIDE.md` and the folders `assets`, `icons` and `music`. (Copy the contents, not the unzipped folder itself.)
 6. Back in GitHub Desktop, the files appear under **Changes**. At the bottom left type a summary such as `First version` → **Commit to main**.
 7. Click **Publish repository** (top bar). **Untick "Keep this code private"** — GitHub Pages is free for public repositories. Public means people can *see* the files; they still **cannot change** them. → **Publish repository**.
 
 **Switch on the website**
 8. **Repository → View on GitHub** opens the repository in your browser → **Settings** → **Pages** (left menu) → under *Build and deployment* choose **Source: Deploy from a branch**, **Branch: main**, folder **/ (root)** → **Save**.
-9. Wait 1–2 minutes, then open **https://golshanamirse.github.io/RMA/** (the address also appears at the top of the Pages settings once it is live).
+9. Wait 1–2 minutes, then open **https://golshanamirse.github.io/RIMA/** (the address also appears at the top of the Pages settings once it is live).
 
 ### 1B. With the GitHub website only
 
 1. **Sign in** at https://github.com (your account: `golshanamirse`).
-2. **Create a repository:** top-right **+** → **New repository** → Name `RMA` → **Public** → leave "Add a README" **unticked** → **Create repository**.
+2. **Create a repository:** top-right **+** → **New repository** → Name `RIMA` → **Public** → leave "Add a README" **unticked** → **Create repository**.
 3. **Unzip** `RMA_web.zip` on your computer.
 4. On the new repository page click **uploading an existing file**. Select **everything inside the unzipped folder** (not the folder itself, and not the zip) and drag it into the browser. Folders keep their structure.
    - Tip: `.nojekyll` is a hidden file. It is optional — the site works without it.
 5. Type a message such as `First version` → **Commit changes**.
 6. **Settings** → **Pages** → **Source: Deploy from a branch**, **Branch: main**, folder **/ (root)** → **Save**.
-7. Wait 1–2 minutes, then open **https://golshanamirse.github.io/RMA/**.
+7. Wait 1–2 minutes, then open **https://golshanamirse.github.io/RIMA/**.
 
 You should see the [ R | M Λ ] player with "New music is on the way". Now add your first tracks (section 2).
 
@@ -79,7 +79,7 @@ music/
 Tip: songs that already have a title, artist, album, genre, year or cover saved inside the MP3 (tags) are read automatically by the owner tools.
 
 ### Step A — make the song list (library.json) with the owner tools
-1. On your computer, open **https://golshanamirse.github.io/RMA/#owner** (the `#owner` at the end shows your tools).
+1. On your computer, open **https://golshanamirse.github.io/RIMA/#owner** (the `#owner` at the end shows your tools).
 2. **Add music** → **Play from this device** → **Choose songs and lyrics** → select all your prepared songs and their `.lrc` files at once.
 3. Check each song in the list: it plays on your device only, shows "lyrics found" when a lyric file matched, and has a **genre** box — set it for any song that has none.
 4. No lyrics yet? Use **Lyric Studio** now (section 3), download the `.lrc` file and put it with the song.
@@ -88,7 +88,7 @@ Tip: songs that already have a title, artist, album, genre, year or cover saved 
 ### Step B — put the files on the site
 
 **With GitHub Desktop**
-1. In GitHub Desktop choose the `RMA` repository → **Fetch origin** (and **Pull origin** if it appears), so your folder has the latest version.
+1. In GitHub Desktop choose the `RIMA` repository → **Fetch origin** (and **Pull origin** if it appears), so your folder has the latest version.
 2. **Repository → Show in Explorer** → open the **music** folder.
 3. Copy in the new songs, their `.lrc` files and covers.
 4. Copy in the downloaded **library.json** and choose **Replace** (Windows may have named the download `library (1).json` — rename it to exactly `library.json`).
@@ -99,10 +99,10 @@ Tip: songs that already have a title, artist, album, genre, year or cover saved 
 2. Drop the new songs, `.lrc` files, covers **and** the downloaded `library.json` (it replaces the old one) → **Commit changes**.
 
 ### Step C — check
-Wait 1–2 minutes and open **https://golshanamirse.github.io/RMA/**. The new songs are in the library; anyone who has the player open gets a "New song" message. Press play and check the lyrics follow the music.
+Wait 1–2 minutes and open **https://golshanamirse.github.io/RIMA/**. The new songs are in the library; anyone who has the player open gets a "New song" message. Press play and check the lyrics follow the music.
 
 ### Editing library.json by hand (optional)
-You can also edit the list directly: GitHub website → `music/library.json` → pencil icon (**Edit**), or open it in Notepad from the `RMA\music` folder. Each song looks like this:
+You can also edit the list directly: GitHub website → `music/library.json` → pencil icon (**Edit**), or open it in Notepad from the `RIMA\music` folder. Each song looks like this:
 
 ```json
 {
@@ -201,7 +201,7 @@ An `.lrc` file is plain text. Each line starts with the time (minutes:seconds.hu
 - **New songs** appear by themselves: the song list is checked every time the player opens or comes back to the screen.
 - **Remove a song:** delete its files from `music` and its entry from `library.json` (the owner tools only add, so remove the entry by hand), then commit and push.
 - **New player versions reach everyone automatically.** Each version carries a `version.json` file. When listeners open the player (or come back to it) it compares itself with the site: if nothing is playing it switches to the new version by itself, and if music is playing it shows **Update now** instead, so nobody is interrupted. After the switch they see "The player was updated" — settings, likes and place are kept.
-- **Install a new player version (from a new zip):** unzip it and copy everything **except the `music` folder** into your `RMA` folder, choosing **Replace** (GitHub Desktop) — or upload those files on the website. Keep your own `music` folder, so your songs and `library.json` stay. Then commit and push. Old files in `assets` can stay; they do no harm.
+- **Install a new player version (from a new zip):** unzip it and copy everything **except the `music` folder** into your `RIMA` folder, choosing **Replace** (GitHub Desktop) — or upload those files on the website. Keep your own `music` folder, so your songs and `library.json` stay. Then commit and push. Old files in `assets` can stay; they do no harm.
 - **Working from two places:** if you sometimes upload on the website and sometimes use GitHub Desktop, always click **Fetch origin** → **Pull origin** in GitHub Desktop before copying files in. Otherwise Desktop refuses to push and asks you to pull first.
 - The player works offline after the first visit (the app itself; songs need a connection).
 
@@ -211,7 +211,7 @@ An `.lrc` file is plain text. Each line starts with the time (minutes:seconds.hu
 
 | Where | What protects it |
 |---|---|
-| Web version | Only people with **write access** to the `RMA` repository can change files — that is only you. Don't add collaborators under **Settings → Collaborators**. Strangers can suggest changes (pull requests), but nothing changes unless you approve them yourself |
+| Web version | Only people with **write access** to the `RIMA` repository can change files — that is only you. Don't add collaborators under **Settings → Collaborators**. Strangers can suggest changes (pull requests), but nothing changes unless you approve them yourself |
 | Company app | Only the app's owner (you) can edit and publish it. When you share it, give people **use/play** access, not **edit** access |
 | Owner tools (`#owner`) | They only prepare files on the device that uses them. They cannot upload or change anything on your site, so a listener who finds them still can't add music to your player |
 
