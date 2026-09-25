@@ -20,4 +20,7 @@ This folder holds everything the player plays:
    (Website: music folder -> Add file -> Upload files -> Commit changes.)
 5. Wait 1-2 minutes and refresh the player.
 
+Updates of the player never contain library.json, so copying a new
+version over your site can't erase your song list.
+
 Full guide: SETUP-GUIDE.md in the top folder of the site.
