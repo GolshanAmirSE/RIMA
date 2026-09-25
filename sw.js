@@ -1,8 +1,8 @@
 // [ R | M Λ ] — keeps the player available offline after the first visit. A new version replaces the old one automatically.
-const CACHE = "rma-player-d8f79427f0";
+const CACHE = "rma-player-6c1049b718";
 const FILES = [
-  "./assets/index-BfnIcurf.css",
-  "./assets/index-DaN0hYxU.js",
+  "./assets/index-BC1ZAamg.js",
+  "./assets/index-gm9yhYy8.css",
   "./",
   "./index.html",
   "./manifest.webmanifest",
@@ -18,8 +18,14 @@ self.addEventListener("activate", (e) => {
 });
 self.addEventListener("fetch", (e) => {
   const req = e.request;
-  if (req.method !== "GET" || new URL(req.url).origin !== location.origin) return;
+  if (req.method !== "GET") return;
   const url = new URL(req.url);
+  // The app's fonts: kept on the device after the first visit, so they are always the same (and work offline).
+  if (/\.woff2$/i.test(url.pathname)) {
+    e.respondWith(caches.open("rma-fonts").then((c) => c.match(req).then((hit) => hit || fetch(req).then((res) => { if (res.ok) c.put(req, res.clone()); return res; }))));
+    return;
+  }
+  if (url.origin !== location.origin) return;
   if (req.mode === "navigate") {
     // The page itself: newest version when online, saved copy when offline.
     e.respondWith(fetch(req, { cache: "no-store" }).catch(() => caches.match("./index.html")));
