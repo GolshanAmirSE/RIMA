@@ -1,8 +1,8 @@
 // [ R | M Λ ] — keeps the player available offline after the first visit. A new version replaces the old one automatically.
-const CACHE = "rma-player-051e5fe664";
+const CACHE = "rma-player-b67e73b238";
 const FILES = [
-  "./assets/index-CBnKQ7u3.js",
-  "./assets/index-DN9bFFZd.css",
+  "./assets/index-D2Q6DUyq.js",
+  "./assets/index-morFVI0u.css",
   "./",
   "./index.html",
   "./manifest.webmanifest",
