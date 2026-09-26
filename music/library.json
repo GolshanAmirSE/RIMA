@@ -3,6 +3,24 @@
   "title": "[ R | M Λ ]",
   "tracks": [
     {
+      "id": "atena",
+      "title": "Atena",
+      "audio": "Atena.mp3",
+      "cover": "Atena.JPG",
+      "lyrics": "Atena.lrc",
+      "title_fa": "آتنا",
+      "genre": "Persian Hip-Hop & R&B"
+    },
+    {
+      "id": "atena-2",
+      "title": "Atena (Version 2)",
+      "audio": "Atena-2.mp3",
+      "cover": "Atena-2.JPG",
+      "lyrics": "Atena-2.lrc",
+      "title_fa": "آتنا (نسخه ۲)",
+      "genre": "Persian Hip-Hop & R&B"
+    },
+    {
       "id": "badjouri",
       "title": "Badjouri",
       "audio": "Badjouri.mp3",
