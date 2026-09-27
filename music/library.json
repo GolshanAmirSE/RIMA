@@ -121,7 +121,8 @@
       "cover": "Roshan-Misham.JPG",
       "lyrics": "Roshan-Misham.lrc",
       "title_fa": "روشن میشم",
-      "genre": "Persian Deep House"
+      "genre": "Persian Deep House",
+      "lyrics_shift": -1
     },
     {
       "id": "roshan-misham-2",
@@ -130,7 +131,8 @@
       "cover": "Roshan-Misham-2.JPG",
       "lyrics": "Roshan-Misham-2.lrc",
       "title_fa": "روشن میشم (نسخه ۲)",
-      "genre": "Persian Deep House"
+      "genre": "Persian Deep House",
+      "lyrics_shift": -1
     }
   ]
 }
