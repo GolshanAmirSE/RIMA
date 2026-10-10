@@ -3,33 +3,6 @@
   "title": "[ R | M Λ ]",
   "tracks": [
     {
-      "id": "atena",
-      "title": "Atena",
-      "audio": "Atena.mp3",
-      "cover": "Atena.JPG",
-      "lyrics": "Atena.lrc",
-      "title_fa": "آتنا",
-      "genre": "Persian Hip-Hop & R&B"
-    },
-    {
-      "id": "badjouri",
-      "title": "Badjouri",
-      "audio": "Badjouri.mp3",
-      "cover": "Badjouri.JPG",
-      "lyrics": "Badjouri.lrc",
-      "title_fa": "بدجوری",
-      "genre": "Persian Organic House"
-    },
-    {
-      "id": "bi-marz",
-      "title": "Bi Marz",
-      "audio": "Bi Marz.mp3",
-      "cover": "Bi Marz.JPG",
-      "lyrics": "Bi Marz.lrc",
-      "title_fa": "بی‌مرز",
-      "genre": "Persian Hip-Hop & R&B"
-    },
-    {
       "id": "bi-havaa",
       "title": "Bi Havaa",
       "audio": "Bi-Havaa.mp3",
@@ -39,13 +12,13 @@
       "genre": "Persian Organic House"
     },
     {
-      "id": "hanouzam",
-      "title": "Hanouzam",
-      "audio": "Hanouzam.mp3",
-      "cover": "Hanouzam.JPG",
-      "lyrics": "Hanouzam.lrc",
-      "title_fa": "هنوزم",
-      "genre": "Persian Pop"
+      "id": "badjouri",
+      "title": "Badjouri",
+      "audio": "Badjouri.mp3",
+      "cover": "Badjouri.JPG",
+      "lyrics": "Badjouri.lrc",
+      "title_fa": "بدجوری",
+      "genre": "Persian Organic House"
     },
     {
       "id": "madaare-ma",
@@ -65,5 +38,32 @@
       "title_fa": "روشن میشم",
       "genre": "Persian Deep House"
     },
+    {
+      "id": "bi-marz",
+      "title": "Bi Marz",
+      "audio": "Bi Marz.mp3",
+      "cover": "Bi Marz.JPG",
+      "lyrics": "Bi Marz.lrc",
+      "title_fa": "بی‌مرز",
+      "genre": "Persian Hip-Hop & R&B"
+    },
+    {
+      "id": "hanouzam",
+      "title": "Hanouzam",
+      "audio": "Hanouzam.mp3",
+      "cover": "Hanouzam.JPG",
+      "lyrics": "Hanouzam.lrc",
+      "title_fa": "هنوزم",
+      "genre": "Persian Pop"
+    },
+    {
+      "id": "atena",
+      "title": "Atena",
+      "audio": "Atena.mp3",
+      "cover": "Atena.JPG",
+      "lyrics": "Atena.lrc",
+      "title_fa": "آتنا",
+      "genre": "Persian Hip-Hop & R&B"
+    }
   ]
 }
