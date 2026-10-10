@@ -45,8 +45,7 @@
       "cover": "Hanouzam.JPG",
       "lyrics": "Hanouzam.lrc",
       "title_fa": "هنوزم",
-      "genre": "Persian Pop",
-      "lyrics_shift": -1
+      "genre": "Persian Pop"
     },
     {
       "id": "madaare-ma",
@@ -55,8 +54,7 @@
       "cover": "Madaare-Ma.JPG",
       "lyrics": "Madaare-Ma.lrc",
       "title_fa": "مدار ما",
-      "genre": "Persian Organic House",
-      "lyrics_shift": -1
+      "genre": "Persian Organic House"
     },
     {
       "id": "roshan-misham",
@@ -65,8 +63,7 @@
       "cover": "Roshan-Misham.JPG",
       "lyrics": "Roshan-Misham.lrc",
       "title_fa": "روشن میشم",
-      "genre": "Persian Deep House",
-      "lyrics_shift": -1
+      "genre": "Persian Deep House"
     },
   ]
 }
